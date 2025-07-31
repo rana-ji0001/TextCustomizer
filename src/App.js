@@ -9,8 +9,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-} from "react-router-dom";
 
+} from "react-router-dom";
 
 
 function App() {
@@ -57,16 +57,16 @@ function App() {
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} changeColor={changeColor}/>
     <div className="container my-3">
       <Routes>
-          <Route exact path="/about" element={<About/>}/>
+          <Route exact path="/about" element={<About mode={mode}/>}/>
 
-          <Route exact path="/" element={<TextForm heading="Enter the Text to analyze below" mode={mode}  showAlert={showAlert}/> }/>
+          <Route exact path="/" element={<TextForm heading="TextCustomizer-Customise your Text" mode={mode}  showAlert={showAlert}/> }/>
         </Routes>
       
-
+       {/* <TextForm heading="Enter the Text to analyze below" mode={mode}  showAlert={showAlert}/> */}
     </div>
       <Alert alert={alert}/>
-      </Router>
 
+    </Router>
     </>
   );
 }
